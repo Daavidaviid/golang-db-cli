@@ -115,22 +115,3 @@ Supprimez un document maître, démontrez la cascade
 Modifiez la relation entre les entités en m:n
 Appliquez une migration des données existantes
 Mêmes démonstrations: lister, modifier, supprimer
-
-## Commentaires :
-
-Question de l'un d'entre vous: "par rapport à l'étape v2 : "Modifiez la relation entre les entités en m:n". Une relation m:n correspond-elle à une relation de type :
-Table 1 (id, ...)
-Table 2 (id, ...)
-Table 3 (id, table1_id, table2_id, ...)
-?
-Mais la relation 1:n créée à l'étape v1 doit toujours exister ? C'est à dire qu'il doit toujours y avoir quelque chose du type :
-Table1_maitre (id, ...)
-Table1_detail (id, talbe1_maitre_id, ...)"
-
-Réponse: non, la relation m:n remplace la relation 1:n. Le but de cette partie du devoir est de traiter un changement de schéma avec conservation de toutes les données possibles, soit manuellement, soit avec un outil de migration tiers, soit avec un outil faisant partie de l'ORM que vous utilisez. Dans le cas d'une migration 1:n vers m:n, il n'y a pas de perte d'information, les éléments de la table détail se retrouvant simplement reliée par la table de relation, avec une seule valeur dans la relation m:n
-
-Information en plus
-
-Question de l'un(e) d'entre vous, qui ne parvient pas à réaliser l'intégralité des étapes du devoir dans l'ordre prévu: est-il possible de ne rendre que des parties du devoir non reliées les unes aux autres ?
-
-Réponse: oui. Pour avoir 20/20, il faut tout faire, ou presque tout et avoir des bonus (présentation, commentaires, tests...); et c'est globalement plus facile en faisant toutes les étapes dans l'ordre. Mais toutes les questions sont notées séparément. Donc si vous séchez sur certaines questions, mais parvenez à faire certaines autres plus loin, n'hésitez pas. En revanche, prenez soin de mettre un README.md à la racine de votre projet pour expliquer ce que vous avez fait et comment le vérifier pour la notation.
